@@ -10,7 +10,7 @@
 
     var $el = this,
       data = {},
-	    lookup = data; //current reference of data
+      lookup = data; //current reference of data
 
       $el.find(':input[type!="checkbox"][type!="radio"], input:checked').each(function() {
         // data[a][b] becomes [ data, a, b ]
@@ -20,8 +20,8 @@
 
         for ( ; i < cap; i++ ) {
             // move down the tree - create objects or array if necessary
-            lookup = lookup[ named[i] ] = lookup[ named[i] ] || 
-                ( named[i+1] == "" ? [] : {} );                   
+            lookup = lookup[ named[i] ] = lookup[ named[i] ] ||
+                ( named[i+1] == "" ? [] : {} );
         }
 
         // at the end, psuh or assign the value
