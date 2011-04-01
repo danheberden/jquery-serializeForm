@@ -3,12 +3,12 @@ $.fn.serializeObject makes an object out of form elements inside of the specifie
 Example: 
 <div id="test">
     <input name="text1" value="txt-one" />
-    <checkbox name="top[child][]" value="1" checked="checked" />
-    <checkbox name="top[child][]" value="2" checked="checked" />
-    <checkbox name="top[child][]" value="3" checked="checked" />
+    <input type="checkbox" name="top[child][]" value="1" checked="checked" />
+    <input type="checkbox" name="top[child][]" value="2" checked="checked" />
+    <input type="checkbox" name="top[child][]" value="3" checked="checked" />
     
     <select name="another[select]">
-    <option value="opt"></option>
+        <option value="opt"></option>
     </select>
 </div>
 
