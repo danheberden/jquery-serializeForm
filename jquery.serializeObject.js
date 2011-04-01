@@ -5,35 +5,36 @@
 * Gives you a pretty object for your form elements
 */
 (function($){
-	$.fn.serializeObject = function( trimKey ) {
-		if ( !this.length ) { return false; }
-		
-	    var $el = this,
-			data = {},
-	        lookup = data; //current reference of data
+  $.fn.serializeObject = function() {
+    if ( !this.length ) { return false; }
 
-	    $el.find(':input[type!="checkbox"][type!="radio"], input:checked').each(function() {
-	        // data[a][b] becomes [ data, a, b ]
-	        var named = this.name.replace(/\[([^\]]+)?\]/g, ',$1').split(','),
-	            cap = named.length - 1;
+    var $el = this,
+      data = {},
+	    lookup = data; //current reference of data
 
-	        for ( var i = trimKey ? 1 : 0 ; i < cap; i++ ) {
-	            // move down the tree - create objects or array if necessary
-	            lookup = lookup[ named[i] ] = lookup[ named[i] ] || 
-	                ( named[i+1] == "" ? [] : {} );                   
-	        }
+      $el.find(':input[type!="checkbox"][type!="radio"], input:checked').each(function() {
+        // data[a][b] becomes [ data, a, b ]
+        var named = this.name.replace(/\[([^\]]+)?\]/g, ',$1').split(','),
+            cap = named.length - 1,
+            i = 0;
 
-	        // at the end, psuh or assign the value
-	        if ( lookup.length != undefined ) {
-	             lookup.push( $(this).val() );   
-	        }else {
-	              lookup[ named[ cap ] ]  = $(this).val();
-	        }    
+        for ( ; i < cap; i++ ) {
+            // move down the tree - create objects or array if necessary
+            lookup = lookup[ named[i] ] = lookup[ named[i] ] || 
+                ( named[i+1] == "" ? [] : {} );                   
+        }
 
-	        // assign the reference back to root
-	        lookup = data;
-	    });
+        // at the end, psuh or assign the value
+        if ( lookup.length != undefined ) {
+             lookup.push( $(this).val() );
+        }else {
+              lookup[ named[ cap ] ]  = $(this).val();
+        }
 
-	    return data;
-	};
+        // assign the reference back to root
+        lookup = data;
+      });
+
+    return data;
+  };
 })(jQuery);
