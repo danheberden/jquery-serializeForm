@@ -2,18 +2,28 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>QUnit Test Suite</title>
-	<link rel="stylesheet" href="../qunit/qunit.css" type="text/css" media="screen">
-	<script type="text/javascript" src="../qunit/qunit.js"></script>
-	<script type="text/javascript" src="test.js"></script>
-	<script type="text/javascript" src="same.js"></script>
+	<title>jQuery.fn.serializeObject Test Suite</title>
+	<link rel="stylesheet" href="../qunit/qunit.css" media="screen">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script src="../qunit/qunit.js"></script>
+	<script src="../jquery.serializeObject.js"></script>
+	<script src="unit/jquery.serializeObject.js"></script>
 </head>
 <body>
-	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h1 id="qunit-header">jQuery.fn.serializeObject QUnit Test Suite</h1>
 	<h2 id="qunit-banner"></h2>
 	<div id="qunit-testrunner-toolbar"></div>
 	<h2 id="qunit-userAgent"></h2>
 	<ol id="qunit-tests"></ol>
-	<div id="qunit-fixture">test markup</div>
+	<div id="qunit-fixture">
+
+		<form id="test-form" name="test-form">
+
+			<input type="text" placeholder="Email" name="name" id="name" value="dude"  />
+			<input type="password" placeholder="Password" name="password" id="password" value="seriously" />
+			<input type="submit" value="Sign In">
+
+		</form>
+	</div>
 </body>
 </html>
