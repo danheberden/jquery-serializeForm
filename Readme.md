@@ -1,7 +1,7 @@
 $.fn.serializeObject makes an object out of form elements inside of the specified item.
 
 Example:
-```html
+
     <div id="test">
       <input name="text1" value="txt-one" />
       <input type="checkbox" name="top[child][]" value="1" checked="checked" />
@@ -12,7 +12,7 @@ Example:
         <option value="opt"></option>
       </select>
     </div>
-```
+
 
 ```javascript
 $( '#test' ).serializeObject();
