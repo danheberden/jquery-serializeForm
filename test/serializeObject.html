@@ -24,11 +24,19 @@
   <ol id="qunit-tests"></ol>
   <div id="qunit-fixture">
     <form id="test-form" name="test-form">
-
       <input type="text" placeholder="Email" name="name" id="name" value="dude"  />
       <input type="password" placeholder="Password" name="password" id="password" value="seriously" />
       <input type="submit" value="Sign In">
+    </form>
+    <form id="test-form-2">
+      <input name="text1" value="txt-one" />
+      <input type="checkbox" name="top[child][]" value="1" checked="checked" />
+      <input type="checkbox" name="top[child][]" value="2" checked="checked" />
+      <input type="checkbox" name="top[child][]" value="3" checked="checked" />
 
+      <select name="another[select]">
+        <option value="opt"></option>
+      </select>
     </form>
   </div>
 </body>

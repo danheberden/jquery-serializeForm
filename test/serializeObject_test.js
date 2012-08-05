@@ -42,4 +42,22 @@
     deepEqual( $("#test-form").serializeObject(), looksLike, "jQuery.fn.serializeObject() only serializes elements with `name` property" );
   });
 
+  test( "Object matches form values", function() {
+    expect(1);
+
+    var result = $( "#test-form-2" ).serializeObject();
+    var looksLike = { text1: "txt-one",
+      top: {
+        child: [ "1", "2", "3" ]
+      },
+      another: {
+        select: "opt"
+      }
+    };
+
+    deepEqual( result, looksLike, "jQuery.fn.serizlieObject() correctly generates form object" );
+  });
+
+
+
 }(jQuery));
