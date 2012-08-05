@@ -1,9 +1,7 @@
-/*
-* .serializeObject (c) Dan Heberden
-* danheberden.com
-*
-* Gives you a pretty object for your form elements
-*/
+/*! serializeObject - v1.0.0 - 2012-08-04
+* https://github.com/danheberden/serializeObject
+* Copyright (c) 2012 Dan Heberden; Licensed MIT, GPL */
+
 (function($){
   $.fn.serializeObject = function() {
     if ( !this.length ) { return false; }
