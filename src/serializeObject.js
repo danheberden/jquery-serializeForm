@@ -20,9 +20,9 @@
       // data[a][b] becomes [ data, a, b ]
       var named = this.name.replace(/\[([^\]]+)?\]/g, ',$1').split(',');
       var cap = named.length - 1;
-       
+
       // Ensure that only elements with valid `name` properties will be serialized
-      if ( named[ 0 ] && (names == null || names[named[0]]) ) {
+      if ( named[ 0 ] && (names == null || $.inArray(named[0], names) != -1 )) {
         for ( var i = 0; i < cap; i++ ) {
             // move down the tree - create objects or array if necessary
             lookup = lookup[ named[i] ] = lookup[ named[i] ] ||

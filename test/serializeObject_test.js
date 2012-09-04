@@ -64,7 +64,7 @@
       name: "dude"
     };
 
-    var result = $("#test-form").serializeObject({name:true});
+    var result = $("#test-form").serializeObject(["name"]);
 
     deepEqual( result, looksLike );
    });
