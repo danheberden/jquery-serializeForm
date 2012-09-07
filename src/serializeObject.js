@@ -5,6 +5,7 @@
  * Copyright (c) 2012 Dan Heberden
  * Licensed under the MIT, GPL licenses.
  */
+
 (function( $ ){
   $.fn.serializeObject = function(names) {
     if ( this.length < 1) { 
@@ -13,8 +14,14 @@
 
     var $el = this;
     var data = {};
+
     var lookup = data; //current reference of data
-    names = names || null;
+    
+    var included;
+    if ( names ) {
+      included = {};
+      $.each( names, function( index ) { included[ names[index] ] = true; } );
+    }
 
     $el.find( ':input[type!="checkbox"][type!="radio"], input:checked' ).each( function() {
       // data[a][b] becomes [ data, a, b ]
@@ -22,7 +29,7 @@
       var cap = named.length - 1;
 
       // Ensure that only elements with valid `name` properties will be serialized
-      if ( named[ 0 ] && (names == null || $.inArray(named[0], names) != -1 )) {
+      if ( named[ 0 ] && ( included == null || included[ named[0] ] ) ) {
         for ( var i = 0; i < cap; i++ ) {
             // move down the tree - create objects or array if necessary
             lookup = lookup[ named[i] ] = lookup[ named[i] ] ||
