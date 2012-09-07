@@ -58,6 +58,15 @@
     deepEqual( result, looksLike, "jQuery.fn.serizlieObject() correctly generates form object" );
   });
 
+  test( "Only serializes requested elements if requested", function() {
+    expect(1);
+    var looksLike = {
+      name: "dude"
+    };
 
+    var result = $("#test-form").serializeObject(["name"]);
+
+    deepEqual( result, looksLike );
+   });
 
 }(jQuery));
