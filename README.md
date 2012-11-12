@@ -47,6 +47,7 @@ Returns
 
 ## Release History
 
+1.1.0 Support finding input elements on the jQuery collection itself and find in multiple elements
 1.0.0 Actual release while moving to grunt and adding licensing information
 
 ## License
