@@ -55,8 +55,22 @@
       }
     };
 
-    deepEqual( result, looksLike, "jQuery.fn.serizlieObject() correctly generates form object" );
+    deepEqual( result, looksLike, "jQuery.fn.serializeObject() correctly generates form object" );
   });
+
+  test( "parses the entire collection", function() {
+    expect(1);
+
+    var result = $( '#test-form-3' ).find('input').serializeObject();
+    var looksLike = { text1: "txt-one",
+      top: {
+        child: [ "1", "2", "3" ]
+      }
+    };
+
+    deepEqual( result, looksLike, "jQuery.fn.serizlieObject() correctly generates object based on elements in the jQuery collection" );
+  });
+
 
 
 
