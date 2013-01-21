@@ -47,6 +47,7 @@ Returns
 
 ## Release History
 
+1.1.3 Fix multiwork keyword in jquery manifest file
 1.1.2 Update manifest files and erase old tags for plugin site
 1.1.1 Rename to serializeForm from serializeObject
 1.1.0 Support finding input elements on the jQuery collection itself and find in multiple elements

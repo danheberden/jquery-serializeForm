@@ -2,7 +2,7 @@
   "name": "serializeForm",
   "title": "jquery-serializeForm - Make an object out of form elements",
   "description": "Make an object out of form elements",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "homepage": "https://github.com/danheberden/jquery-serializeForm",
   "author": {
     "name": "Dan Heberden",
@@ -27,7 +27,7 @@
     "serialize",
     "serializeObject",
     "serializeArray",
-    "form object",
+    "form-object",
     "params"
   ]
 }
