@@ -1,16 +1,16 @@
-# serializeObject
+# serializeForm
 
 Make an object out of form elements
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/danheberden/serializeObject/master/dist/serializeObject.min.js
-[max]: https://raw.github.com/danheberden/serializeObject/master/dist/serializeObject.js
+[min]: https://raw.github.com/danheberden/serializeForm/master/dist/serializeForm.min.js
+[max]: https://raw.github.com/danheberden/serializeForm/master/dist/serializeForm.js
 
 ## To Use
 
-$.fn.serializeObject makes an object out of form elements inside of the specified item.
+$.fn.serializeForm makes an object out of form elements inside of the specified item.
 
 Example:
 
@@ -29,7 +29,7 @@ Example:
 
 
 ```javascript
-$( '#test' ).serializeObject();
+$( '#test' ).serializeForm();
 ```
 
 Returns

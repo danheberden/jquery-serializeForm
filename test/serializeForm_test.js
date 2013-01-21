@@ -39,13 +39,13 @@
       password: "seriously"
     };
 
-    deepEqual( $("#test-form").serializeObject(), looksLike, "jQuery.fn.serializeObject() only serializes elements with `name` property" );
+    deepEqual( $("#test-form").serializeForm(), looksLike, "jQuery.fn.serializeForm() only serializes elements with `name` property" );
   });
 
   test( "Object matches form values", function() {
     expect(1);
 
-    var result = $( "#test-form-2" ).serializeObject();
+    var result = $( "#test-form-2" ).serializeForm();
     var looksLike = { text1: "txt-one",
       top: {
         child: [ "1", "2", "3" ]
@@ -55,13 +55,13 @@
       }
     };
 
-    deepEqual( result, looksLike, "jQuery.fn.serializeObject() correctly generates form object" );
+    deepEqual( result, looksLike, "jQuery.fn.serializeForm() correctly generates form object" );
   });
 
   test( "parses the entire collection", function() {
     expect(1);
 
-    var result = $( '#test-form-3' ).find('input').serializeObject();
+    var result = $( '#test-form-3' ).find('input').serializeForm();
     var looksLike = { text1: "txt-one",
       top: {
         child: [ "1", "2", "3" ]

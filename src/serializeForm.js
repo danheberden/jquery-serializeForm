@@ -1,12 +1,12 @@
 /*
- * serializeObject
- * https://github.com/danheberden/serializeObject
+ * serializeForm
+ * https://github.com/danheberden/serializeForm
  *
  * Copyright (c) 2012 Dan Heberden
  * Licensed under the MIT, GPL licenses.
  */
 (function( $ ){
-  $.fn.serializeObject = function() {
+  $.fn.serializeForm = function() {
 
     // don't do anything if we didn't get any elements
     if ( this.length < 1) { 

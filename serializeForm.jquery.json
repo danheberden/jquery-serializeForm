@@ -1,0 +1,33 @@
+{
+  "name": "serializeForm",
+  "title": "jquery-serializeForm - Make an object out of form elements",
+  "description": "Make an object out of form elements",
+  "version": "1.1.1",
+  "homepage": "https://github.com/danheberden/jquery-serializeForm",
+  "author": {
+    "name": "Dan Heberden",
+    "email": "danheberden@gmail.com",
+    "url": "http://danheberden.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danheberden/jquery-serializeForm.git"
+  },
+  "bugs": "https://github.com/danheberden/jquery-serializeForm/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/danheberden/jquery-serializeForm/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">= 1.6.2"
+  },
+  "keywords": [
+    "serialize",
+    "serializeObject",
+    "serializeArray",
+    "form object",
+    "params"
+  ]
+}
