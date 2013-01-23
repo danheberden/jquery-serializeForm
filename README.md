@@ -5,8 +5,8 @@ Make an object out of form elements
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/danheberden/serializeForm/master/dist/serializeForm.min.js
-[max]: https://raw.github.com/danheberden/serializeForm/master/dist/serializeForm.js
+[min]: https://raw.github.com/danheberden/jquery-serializeForm/master/dist/serializeForm.min.js
+[max]: https://raw.github.com/danheberden/jquery-serializeForm/master/dist/serializeForm.js
 
 ## To Use
 
