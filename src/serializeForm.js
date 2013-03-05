@@ -6,7 +6,7 @@
  * Licensed under the MIT, GPL licenses.
  */
 (function( $ ){
-  $.fn.serializeForm = function() {
+  $.fn.serializeForm = function(fn) {
 
     // don't do anything if we didn't get any elements
     if ( this.length < 1) { 
@@ -22,6 +22,7 @@
       var named = this.name.replace(/\[([^\]]+)?\]/g, ',$1').split(',');
       var cap = named.length - 1;
       var $el = $( this );
+      var val;
 
       // Ensure that only elements with valid `name` properties will be serialized
       if ( named[ 0 ] ) {
@@ -33,7 +34,11 @@
 
         // at the end, push or assign the value
         if ( lookup.length !==  undefined ) {
-          lookup.push( $el.val() );
+          val = $el.val();
+          if($.isFunction(fn)){
+            val = fn(val);
+          }
+          lookup.push( val );
         }else {
           lookup[ named[ cap ] ]  = $el.val();
         }
