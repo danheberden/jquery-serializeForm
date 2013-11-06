@@ -22,7 +22,7 @@
       raises(block, [expected], [message])
   */
 
-  module('SerializeObject', {
+  module('SerializeForm', {
     setup: function() {
       this.elems = $('#qunit-fixture').children();
     }
@@ -68,10 +68,21 @@
       }
     };
 
-    deepEqual( result, looksLike, "jQuery.fn.serizlieObject() correctly generates object based on elements in the jQuery collection" );
+    deepEqual( result, looksLike, "jQuery.fn.serizlieForm() correctly generates object based on elements in the jQuery collection" );
   });
 
+  test("Ignore disabled elements", function() {
+    expect(1);
 
+    var looksLike = {
+      text1: "txt-one",
+      top: {
+        child: [ "1", "2", "3" ]
+      }
+    };
+    var result = $( "#test-form-disabled" ).serializeForm();
 
+    deepEqual( result, looksLike, "Ignored disabled element" );
+  });
 
 }(jQuery));

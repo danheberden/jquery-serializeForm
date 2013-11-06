@@ -16,6 +16,11 @@
     var selector = ':input[type!="checkbox"][type!="radio"], input:checked';
     var parse = function() {
 
+      // Ignore disabled elements
+      if (this.disabled) {
+        return;
+      }
+
       // data[a][b] becomes [ data, a, b ]
       var named = this.name.replace(/\[([^\]]+)?\]/g, ',$1').split(',');
       var cap = named.length - 1;
