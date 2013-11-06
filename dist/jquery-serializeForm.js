@@ -1,4 +1,4 @@
-/*! jquery-serializeForm - v1.2.0 - 2013-11-06
+/*! jquery-serializeForm - v1.2.1 - 2013-11-06
  * http://danheberden.com/
  * Copyright (c) 2013 Dan Heberden
  * Licensed MIT
@@ -31,7 +31,7 @@
         for ( var i = 0; i < cap; i++ ) {
           // move down the tree - create objects or array if necessary
           lookup = lookup[ named[i] ] = lookup[ named[i] ] ||
-            ( named[ i + 1 ] === "" ? [] : {} );
+            ( (named[ i + 1 ] === "" || named[ i + 1 ] === '0') ? [] : {} );
         }
 
         // at the end, push or assign the value
