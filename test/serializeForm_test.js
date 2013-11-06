@@ -83,10 +83,34 @@
     };
 
     deepEqual( result, looksLike, "Provided array index made into an array" );
-
   });
 
 
+  test( 'Provided array index works with nested objects', function() {
+    expect(1);
+
+    var result = $( '#test-form-object-in-array' ).serializeForm();
+    var looksLike = {
+      block: [
+        {
+          people: {
+            first_name: '0-first',
+            last_name: '0-last'
+          },
+          room: '0-room'
+        },
+        {
+          people: {
+            first_name: '1-first',
+            last_name: '1-last'
+          },
+          room: '1-room'
+        }
+      ]
+    };
+
+    deepEqual( result, looksLike, "Provided array index made into an array" );
+  });
   test("Ignore disabled elements", function() {
     expect(1);
 
