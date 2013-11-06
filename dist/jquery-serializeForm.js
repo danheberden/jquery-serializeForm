@@ -1,9 +1,10 @@
-/*! serializeObject - v1.0.0 - 2012-11-12
-* https://github.com/danheberden/serializeObject
-* Copyright (c) 2012 Dan Heberden; Licensed MIT, GPL */
-
+/*! jquery-serializeForm - v1.2.0 - 2013-11-06
+ * http://danheberden.com/
+ * Copyright (c) 2013 Dan Heberden
+ * Licensed MIT
+**/
 (function( $ ){
-  $.fn.serializeObject = function() {
+  $.fn.serializeForm = function() {
 
     // don't do anything if we didn't get any elements
     if ( this.length < 1) { 
