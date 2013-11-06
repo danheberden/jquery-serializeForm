@@ -51,6 +51,19 @@
       <input type="checkbox" name="top[child][]" value="3" checked="checked" />
       <input type="text" name="text2" disabled value="txt-two" />
     </form>
+    <form id="test-form-array-index">
+      <input name="text[0]" value="0-text" />
+      <input name="text[1]" value="1-text" />
+    </form>
+    <form id="test-form-object-in-array">
+      <input name="block[0][people][first_name]" value="0-first" />
+      <input name="block[0][people][last_name]" value="0-last" />
+      <input name="block[0][room]" value="0-room" />
+
+      <input name="block[1][people][first_name]" value="1-first" />
+      <input name="block[1][people][last_name]" value="1-last" />
+      <input name="block[1][room]" value="1-room" />
+    </form>
   </div>
 </body>
 </html>

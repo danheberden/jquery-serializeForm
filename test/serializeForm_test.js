@@ -68,8 +68,24 @@
       }
     };
 
-    deepEqual( result, looksLike, "jQuery.fn.serizlieForm() correctly generates object based on elements in the jQuery collection" );
+    deepEqual( result, looksLike, "jQuery.fn.serializeForm() correctly generates object based on elements in the jQuery collection" );
   });
+
+  test( 'Treat items with a provided array index as an actual array', function() {
+    expect(1);
+
+    var result = $( '#test-form-array-index' ).serializeForm();
+    var looksLike = {
+      text: [
+        "0-text",
+        "1-text"
+      ]
+    };
+
+    deepEqual( result, looksLike, "Provided array index made into an array" );
+
+  });
+
 
   test("Ignore disabled elements", function() {
     expect(1);
