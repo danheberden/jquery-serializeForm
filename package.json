@@ -8,6 +8,7 @@
     "name": "Dan Heberden",
     "url": "http://danheberden.com/"
   },
+  "main": "src/serializeForm.js",
   "homepage": "http://danheberden.com/",
   "scripts": {
     "test": "grunt qunit"
