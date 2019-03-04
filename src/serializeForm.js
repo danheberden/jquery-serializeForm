@@ -6,11 +6,17 @@
  * Licensed under the MIT, GPL licenses.
  */
 (function( $ ){
-  $.fn.serializeForm = function() {
+  $.fn.serializeForm = function(getElementValue) {
 
     // don't do anything if we didn't get any elements
     if ( this.length < 1) { 
       return false; 
+    }
+
+    if(typeof getElementValue !== 'function') {
+      getElementValue = function($el) {
+          return $el.val();
+      };
     }
 
     var data = {};
@@ -38,9 +44,9 @@
 
         // at the end, push or assign the value
         if ( lookup.length !==  undefined ) {
-          lookup.push( $el.val() );
+          lookup.push( getElementValue($el) );
         }else {
-          lookup[ named[ cap ] ]  = $el.val();
+          lookup[ named[ cap ] ]  = getElementValue($el);
         }
 
         // assign the reference back to root
